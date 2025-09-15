@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Jharkhand - Tourist Information Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body class="min-h-screen bg-gray-50">
+
+
+    <script src="./script.js"></script>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <h1 class="text-2xl font-bold text-gray-800">Visit Jharkhand</h1>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6">
+                    <button class="nav-btn px-4 py-2 rounded-lg transition-colors text-gray-600 hover:text-green-600" data-section="destinations">Destinations</button>
+                    <button class="nav-btn px-4 py-2 rounded-lg transition-colors text-gray-600 hover:text-green-600" data-section="travel-info">Travel Info</button>
+                    <button class="nav-btn px-4 py-2 rounded-lg transition-colors text-gray-600 hover:text-green-600" data-section="accommodations">Stay</button>
+                    <button class="nav-btn px-4 py-2 rounded-lg transition-colors text-gray-600 hover:text-green-600" data-section="culture">Culture</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden pb-4 hidden">
+                <button class="nav-btn block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600" data-section="destinations">Destinations</button>
+                <button class="nav-btn block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600" data-section="travel-info">Travel Info</button>
+                <button class="nav-btn block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600" data-section="accommodations">Stay</button>
+                <button class="nav-btn block w-full text-left px-4 py-2 text-gray-600 hover:text-green-600" data-section="culture">Culture</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 bg-gradient-to-r from-green-600 to-blue-600 flex items-center justify-center text-white">
+        <div class="text-center hero-content">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">Discover Jharkhand</h2>
+            <p class="text-xl md:text-2xl opacity-90">Land of Forests, Waterfalls & Rich Culture</p>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Popular Destinations</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Netarhat -->
+                <div class="destination-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" alt="Netarhat" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Netarhat</h3>
+                        <p class="text-gray-600 mb-4">Known as the 'Queen of Chotanagpur', Netarhat offers breathtaking sunrise and sunset views from its hilltop location.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Sunrise Point</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Sunset Point</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Magnolia Point</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patratu -->
+                <div class="destination-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=400&h=250&fit=crop" alt="Patratu" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Patratu</h3>
+                        <p class="text-gray-600 mb-4">Famous for the Patratu Valley and Dam, offering stunning landscapes and boating opportunities.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Patratu Dam</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Valley Views</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Boating</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Betla -->
+                <div class="destination-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="./D9Qq4ebUYAA3iIt.jpg" alt="Betla National Park" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Betla National Park</h3>
+                        <p class="text-gray-600 mb-4">Home to tigers, elephants, and diverse wildlife in the heart of Palamu district.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Wildlife Safari</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Tiger Reserve</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Nature Trails</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hundru Falls -->
+                <div class="destination-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=250&fit=crop" alt="Hundru Falls" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Hundru Falls</h3>
+                        <p class="text-gray-600 mb-4">A spectacular 98-meter waterfall on the Subarnarekha River, perfect for nature lovers.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">98m Waterfall</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Swimming</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deoghar -->
+                <div class="destination-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=250&fit=crop" alt="Deoghar" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Deoghar</h3>
+                        <p class="text-gray-600 mb-4">Sacred city known for the Baidyanath Temple, one of the twelve Jyotirlingas.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Baidyanath Temple</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Nandan Pahar</span>
+                            <span class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-full">Tapovan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Info Section -->
+    <section id="travel-info" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">How to Reach</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Train -->
+                <div class="travel-card bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Train</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Major railway stations: Ranchi, Dhanbad, Bokaro. Good connectivity to major cities.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Delhi-Ranchi Express
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Howrah-Ranchi Express
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Mumbai-Dhanbad Express
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bus -->
+                <div class="travel-card bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Bus</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">State transport and private buses connect all major destinations.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Ranchi-Patna
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Ranchi-Kolkata
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Dhanbad-Delhi
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taxi/Car -->
+                <div class="travel-card bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Taxi/Car</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Well-connected road network. Cab services available for local sightseeing.</p>
+                    <div class="space-y-2">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            NH-33
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            NH-18
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            SH-1
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodations Section -->
+    <section id="accommodations" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Places to Stay</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Hotel 1 -->
+                <div class="accommodation-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Hotel Yuvraj Palace</h3>
+                    <div class="flex items-center mb-2 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Ranchi
+                    </div>
+                    <div class="flex items-center mb-2 text-green-600 font-semibold">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        ₹2000-4000
+                    </div>
+                    <div class="flex items-center mb-4 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        +91-651-2345678
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">WiFi</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Restaurant</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Parking</span>
+                    </div>
+                </div>
+
+                <!-- Hotel 2 -->
+                <div class="accommodation-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Patratu Resort</h3>
+                    <div class="flex items-center mb-2 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Patratu
+                    </div>
+                    <div class="flex items-center mb-2 text-green-600 font-semibold">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        ₹1500-3000
+                    </div>
+                    <div class="flex items-center mb-4 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        +91-651-2345679
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Lake View</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Boating</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Restaurant</span>
+                    </div>
+                </div>
+
+                <!-- Hotel 3 -->
+                <div class="accommodation-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Netarhat Tourist Lodge</h3>
+                    <div class="flex items-center mb-2 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Netarhat
+                    </div>
+                    <div class="flex items-center mb-2 text-green-600 font-semibold">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        ₹1000-2500
+                    </div>
+                    <div class="flex items-center mb-4 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        +91-651-2345680
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Hill View</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Bonfire</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Local Cuisine</span>
+                    </div>
+                </div>
+
+                <!-- Hotel 4 -->
+                <div class="accommodation-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Deoghar Dharamshala</h3>
+                    <div class="flex items-center mb-2 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Deoghar
+                    </div>
+                    <div class="flex items-center mb-2 text-green-600 font-semibold">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        ₹500-1500
+                    </div>
+                    <div class="flex items-center mb-4 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        +91-651-2345681
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Temple Nearby</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Budget Friendly</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Clean Rooms</span>
+                    </div>
+                </div>
+
+                <!-- Hotel 5 -->
+                <div class="accommodation-card bg-white border border-gray-200 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-gray-800">Betla Forest Lodge</h3>
+                    <div class="flex items-center mb-2 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Betla
+                    </div>
+                    <div class="flex items-center mb-2 text-green-600 font-semibold">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        ₹1200-2800
+                    </div>
+                    <div class="flex items-center mb-4 text-gray-600">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        +91-651-2345682
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Wildlife View</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Safari Booking</span>
+                        <span class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-full">Nature Walks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Local Culture & Heritage</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Festivals -->
+                <div class="culture-card bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4 text-orange-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Festivals</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Sarhul</h4>
+                            <p class="text-gray-600 text-sm">Spring festival celebrating nature and new beginnings</p>
+                        </div>
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Karma Puja</h4>
+                            <p class="text-gray-600 text-sm">Harvest festival with traditional dance and music</p>
+                        </div>
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Karam</h4>
+                            <p class="text-gray-600 text-sm">Celebration of the Karam tree with folk performances</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tribal Art -->
+                <div class="culture-card bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4 text-orange-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Tribal Art</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Paitkar Paintings</h4>
+                            <p class="text-gray-600 text-sm">Traditional scroll paintings depicting mythological stories</p>
+                        </div>
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Tribal Crafts</h4>
+                            <p class="text-gray-600 text-sm">Handwoven baskets, pottery, and wood carvings</p>
+                        </div>
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Folk Music</h4>
+                            <p class="text-gray-600 text-sm">Traditional songs and instruments like Mandar and Nagara</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local Cuisine -->
+                <div class="culture-card bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4 text-orange-600">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Local Cuisine</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Litti Chokha</h4>
+                            <p class="text-gray-600 text-sm">Roasted wheat balls with spiced mashed vegetables</p>
+                        </div>
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Pittha</h4>
+                            <p class="text-gray-600 text-sm">Steamed rice cakes often served during festivals</p>
+                        </div>
+                        <div class="border-l-4 border-orange-200 pl-4">
+                            <h4 class="font-semibold text-gray-800 mb-1">Handia</h4>
+                            <p class="text-gray-600 text-sm">Traditional rice beer popular among tribal communities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold">Visit Jharkhand</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Discover the natural beauty and rich cultural heritage of Jharkhand.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><button class="footer-link text-gray-400 hover:text-white transition-colors" data-section="destinations">Destinations</button></li>
+                        <li><button class="footer-link text-gray-400 hover:text-white transition-colors" data-section="travel-info">Travel Info</button></li>
+                        <li><button class="footer-link text-gray-400 hover:text-white transition-colors" data-section="accommodations">Stay</button></li>
+                        <li><button class="footer-link text-gray-400 hover:text-white transition-colors" data-section="culture">Culture</button></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            +91-651-2345678
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            info@visitjharkhand.com
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Ranchi, Jharkhand
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Visit Hours</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Mon - Sat: 9AM - 6PM
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Sunday: 10AM - 4PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2025 Visit Jharkhand. All rights reserved. | Made with ❤️ for Jharkhand Tourism
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
